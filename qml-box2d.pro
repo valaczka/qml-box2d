@@ -11,9 +11,7 @@ else: TARGET = qml-box2d
 TEMPLATE = lib
 
 
-win32 {
-	CONFIG += dll
-}
+win32: CONFIG += staticlib
 
 
 DESTDIR = ../
