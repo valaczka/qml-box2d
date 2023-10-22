@@ -11,6 +11,8 @@ else: TARGET = qml-box2d
 TEMPLATE = lib
 
 
+CONFIG += separate_debug_info
+
 win32: CONFIG += staticlib
 
 
