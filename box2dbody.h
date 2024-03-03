@@ -114,7 +114,7 @@ public:
 
     QQmlListProperty<Box2DFixture> fixtures();
 
-    void synchronize();
+    virtual void synchronize();
     void nullifyBody();
 
     Q_INVOKABLE void applyForce(const QPointF &force, const QPointF &point);
@@ -165,10 +165,12 @@ private slots:
 private:
     void createBody();
 
+protected:
     Box2DWorld *mWorld;
     QQuickItem *mTarget;
     b2Body *mBody;
     b2BodyDef mBodyDef;
+
     bool mComponentComplete;
     bool mTransformDirty;
     bool mCreatePending;
