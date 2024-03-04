@@ -141,7 +141,7 @@ public:
     b2Body *body() const;
 
     bool transformDirty() const;
-    void updateTransform();
+    virtual void updateTransform();
 
 signals:
     void worldChanged();
