@@ -183,6 +183,14 @@ Box2DBody *Box2DFixture::getBody() const
     return mBody;
 }
 
+bool Box2DFixture::containsPoint(const QPointF &point) const
+{
+    if (mFixture)
+        return mFixture->TestPoint(mBody->world()->toMeters(point));
+    else
+        return false;
+}
+
 //=================== BOX =======================
 
 void Box2DBox::setX(qreal x)

@@ -87,6 +87,8 @@ public:
 
     Q_INVOKABLE Box2DBody *getBody() const;
 
+    bool containsPoint(const QPointF &point) const;
+
 signals:
     void densityChanged();
     void frictionChanged();
